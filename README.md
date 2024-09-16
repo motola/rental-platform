@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 # React + Vite
+=======
+# Introduction
+This Project is a rental platform to help people in diaspora get both affordable and quality housing as they settle in the United Kingdom
+>>>>>>> 8910994ae3bec155997d0bd266b67a9a73ae2108
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
