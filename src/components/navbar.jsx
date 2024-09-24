@@ -1,6 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
+import logo from '../assets/images/Moshitu.svg';
 
-const Navbar = () => {
+const Navbar = ({buttonLabel, dropdownOptions, link}) => {
+
+  const  [dropdown, setDropdown] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdown(!dropdown);
+  };
+
   return (
     <nav className="bg-green z-10 shadow-md w-full fixed px-20 py-6 top-0 right-0 left-0" style={{ backgroundColor: "#FEF0D2" }}>
       <div className="w-full px-0 flex justify-between items-center">
@@ -11,7 +19,7 @@ const Navbar = () => {
             alt="Logo"
             className="h-8 w-8 mr-2"
           />
-          <span className="text-xl font-semibold text-gray-800"> Moshitu</span>
+          <img src={logo} className="px-16 -py-28 w-1/4"/>
         </div>
 
         {/* Right Side: Navigation Links */}
@@ -37,10 +45,28 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="/signup" className="text-gray-600 font-bold hover:text-white bg-buttonPrimary py-2 px-2 rounded-md">
-             Sign Up/Login
-            </a>
+          
+           
           </li>
+          { dropdownOptions ? (
+            <div>
+          <button className="text-gray-600 font-bold hover:text-white bg-buttonPrimary py-2 px-4 rounded-md" onClick={toggleDropdown}> 
+            {buttonLabel}
+          </button>  
+          { dropdown && (
+           <ul className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md">
+            {dropdownOptions.map((option, index) => (
+                <li key={index} className="px-4 py-2 hover:bg-gray-200 cursor-pointer">
+                  {option}
+                </li>
+              ))}
+           </ul>
+          )} 
+          </div>
+        ) : (
+            <a className="text-gray-600 font-bold hover:text-white bg-buttonPrimary py-2 px-4 rounded-md" href="/signup" > {link.label} 
+            </a>
+          )}
         </ul>
       </div>
     </nav>
