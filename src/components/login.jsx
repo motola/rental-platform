@@ -1,10 +1,12 @@
 import React from "react";
+import logo from '../assets/images/Moshitu.svg';
+
 
 const Login = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6" style={{ backgroundColor: "#E6FBF4" }}>
       {/* Site Header */}
-      <span className="text-4xl font-semibold text-gray-800">Moshitu</span>
+      <img src={logo} className="px-16 -py-28 w-1/4"/>
       
       {/* Login Header */}
       <h1 className="text-3xl w-1/4 mx-0 px-0 py-10 pb-0 font-bold mb-4 text-left">Log In</h1>

@@ -1,6 +1,8 @@
 import React from 'react';
-import exampleImage from '../assets/images/bgH2.jpg'; // Replace with your image path
-
+import exampleImage from '../assets/images/bgH2.jpg'; 
+import logo1 from '../assets/images/bed1.jpg'; 
+import logo2 from '../assets/images/bed2.jpg'; 
+import logo3 from '../assets/images/bed3.jpg';
 const HomeCard = () => {
   return (
     <div>
@@ -14,11 +16,11 @@ const HomeCard = () => {
         <div className="flex justify-center flex-wrap gap-40">
           {/* Card 1 */}
           <div className="rounded-lg shadow-lg overflow-hidden w-full md:w-1/4 border-black border-l border-r border-b rounded-lg">
-            <img src={exampleImage} alt="Card Image 1" className="w-full h-48 object-cover" />
+            <img src={logo3} alt="Card Image 1" className="w-full h-48 object-cover" />
             <div className="p-6 bg-white">
               <h2 className="text-2xl font-semibold mb-2">Charming 2-Bedroom Flat in Central London</h2>
               <p className="mb-4">
-              Spacious 2-bedroom flat with open-plan living, modern kitchen, and ample storage. Close to transport, shops, and...
+               Spacious 2-bedroom flat with open-plan living, modern kitchen, and ample storage. Close to transport, shops, and...
               </p>
               <button className="bg-green-500 text-white px-4 py-2 rounded-md font-semibold">
                 Learn More
@@ -28,7 +30,7 @@ const HomeCard = () => {
 
           {/* Card 2 */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full md:w-1/4 border-black border-l border-r border-b rounded-lg">
-            <img src={exampleImage} alt="Card Image 2" className="w-full h-48 object-cover" />
+            <img src={logo2} alt="Card Image 2" className="w-full h-48 object-cover" />
             <div className="p-6">
               <h2 className="text-2xl font-semibold mb-2">Charming 4-Bedroom Flat in Bradford</h2>
               <p className="mb-4">
@@ -42,7 +44,7 @@ const HomeCard = () => {
 
           {/* Card 3 */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full md:w-1/4 border-black border-l border-r border-b rounded-lg">
-            <img src={exampleImage} alt="Card Image 3" className="w-full h-48 object-cover" />
+            <img src={logo1} alt="Card Image 3" className="w-full h-48 object-cover" />
             <div className="p-6">
               <h2 className="text-2xl font-semibold mb-2">Charming 3-Bedroom Flat in Bradford</h2>
               <p className="mb-4">

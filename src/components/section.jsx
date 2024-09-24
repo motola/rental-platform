@@ -1,5 +1,7 @@
 import React from 'react';
-import exampleImage from '../assets/images/bgH2.jpg'; // Replace with your image path
+import exampleImage from '../assets/images/bgH2.jpg';
+import logo1 from '../assets/images/bed1.jpg'; 
+import logo2 from '../assets/images/ease.jpg'; 
 
 const Sections = () => {
   return (
@@ -7,7 +9,7 @@ const Sections = () => {
       {/* First Section */}
       
       <section className="flex justify-center flex-col items-center py-5" style={{ Color: "#00000" }}>
-      <div className="flex w-full w-7/12 items-center mb-4">
+      <div className="flex w-full w-7/12 px-30 items-center mb-4">
           <div className="border-t border-dashed w-3/4 border-black" ></div>
           <h3 className="flex w-full justify-center text-2xl font-bold">Safe Landlords . Right Tenants</h3>
           <div className="border-t border-dashed w-3/4 border-black"></div>
@@ -64,9 +66,10 @@ minimize the risk of  renting from a landlord to renting out to a tenant. We hav
 
           {/* Image with slight rotation */}
           <img
-            src={exampleImage}
+            src={logo2}
             alt="Example"
-            className="relative w-full h-auto transform rotate-2"
+            style={{ height: '450px' }}
+            className="relative object-cover w-full h-2/6 transform rotate-2"
           />
         </div>
         <div className="md:w-3/4 px-20 p-4">
