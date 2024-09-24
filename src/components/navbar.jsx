@@ -37,7 +37,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="#faq" className="text-gray-600 font-bold hover:text-white bg-buttonPrimary py-2 px-2 rounded-md">
+            <a href="/signup" className="text-gray-600 font-bold hover:text-white bg-buttonPrimary py-2 px-2 rounded-md">
              Sign Up/Login
             </a>
           </li>
