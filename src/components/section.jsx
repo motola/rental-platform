@@ -9,7 +9,7 @@ const Sections = () => {
       <section className="flex justify-center flex-col items-center py-5" style={{ Color: "#00000" }}>
       <div className="flex w-full w-7/12 items-center mb-4">
           <div className="border-t border-dashed w-3/4 border-black" ></div>
-          <h3 className="flex w-full justify-center text-2xl font-bold">Safe Lanlords . Right Tenants</h3>
+          <h3 className="flex w-full justify-center text-2xl font-bold">Safe Landlords . Right Tenants</h3>
           <div className="border-t border-dashed w-3/4 border-black"></div>
         </div>
         <p className="text-center text-xl max-w-3xl py-10">

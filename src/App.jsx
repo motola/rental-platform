@@ -1,21 +1,31 @@
-import Navbar from './components/navbar';
-import Hero from './components/hero';
-import Section from './components/section';
-import HomeCard from './components/homeCard';
+// src/App.js
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Signup from "./components/signup";  // Import the Signup component
+import Home from "./pages/Homepage"; 
+import Login from "./components/login"
+
 
 import './App.css'
 
-function App() {
-  
-
+const App = () => {
   return (
-    <>
-     <Navbar />
-     <Hero />
-     <Section />
-     <HomeCard />
-    </>
-  )
-}
+    <Router>
+      <Routes>
+        
+        <Route path="/" element={<Home />} />
 
-export default App
+        {/* Define route for the Signup page */}
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
+
+
+
+
+
