@@ -1,7 +1,12 @@
 import React, {useState} from "react";
 import logo from '../assets/images/Moshitu.svg';
 
-const Navbar = ({buttonLabel, dropdownOptions, link}) => {
+const signup = {
+  url: '/signup',
+  label: 'login/SignUp'
+}
+
+const Navbar = ({buttonLabel='Login/SignUp', dropdownOptions, link=signup}) => {
 
   const  [dropdown, setDropdown] = useState(false);
 
@@ -14,12 +19,14 @@ const Navbar = ({buttonLabel, dropdownOptions, link}) => {
       <div className="w-full px-0 flex justify-between items-center">
         {/* Left Side: Logo and Name */}
         <div className="flex items-center">
+          <a href="/">
           <img
             src="/logo.png" // replace this with the logo's path
             alt="Logo"
             className="h-8 w-8 mr-2"
           />
           <img src={logo} className="px-16 -py-28 w-1/4"/>
+          </a>
         </div>
 
         {/* Right Side: Navigation Links */}
@@ -40,7 +47,7 @@ const Navbar = ({buttonLabel, dropdownOptions, link}) => {
             </a>
           </li>
           <li>
-            <a href="#contact" className="text-gray-600 hover:text-green-500">
+            <a href="/about" className="text-gray-600 hover:text-green-500">
               About us
             </a>
           </li>
