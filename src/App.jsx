@@ -9,6 +9,11 @@ import Booking from "./pages/booking";
 import SavedItems from "./pages/savedItems";
 import Forgotpassword from "./components/forgotPassword";
 import AboutUs from "./pages/about";
+import Listing from "./pages/listings";
+import Admin from "./components/admin";
+import Details from "./pages/propDetails";
+import Message from "./components/message"
+// import Fizz from "./components/fizz"
 
 
 import './App.css'
@@ -23,12 +28,16 @@ const App = () => {
          {/* Define route for the Signup page */}
           
           <Route path="/booking" element={<Booking />} />
-          <Route path="/user/save" element={<SavedItems />} />
+          <Route path="/save" element={<SavedItems />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/listing" element={<Listing />} />
+          <Route path="/details" element={<Details />} />
+          <Route path="/message" element={<Message />} />
           </Route>
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/forgot" element={<Forgotpassword />} />
+          <Route path="/admin" element={<Admin />} />
       </Routes>
     </Router>
   );

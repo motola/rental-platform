@@ -11,8 +11,8 @@ const PlainCard = ({favouriteIcon}) => {
       {/* Card with details */}
       <div className="flex-col px-4 mt-4 my-0">
         <div className='flex w-full'>
-        <h2 className="text-xl w-2/3 -py-1 font-bold">Charming 2-Bedroom Flat in Central London</h2>
-        <div className="favourite-icon ml-20">
+        <h2 className="text-xl w-2/3 py-0 font-bold">Charming 2-Bedroom Flat in Central London</h2>
+        <div className="favourite-icon ml-20 mt-0 py-0">
             {favouriteIcon}
           </div>
           </div>
