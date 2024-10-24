@@ -10,11 +10,10 @@ import Uploads from "../components/latestUploads";
  
 
 const Booking = () => {
-    let dropdownItems =  ["My Bookings", "Saved Apartments", "Logout"]
+    
   return (
    
     <>
-    <Navbar buttonLabel="Profile" dropdownOptions={dropdownItems} />
     <SubHeader text="My Bookings" />
     <div className="px-40 pt-20 items-start flex" style= {{backgroundColor: '#F6F6F6'}}>
     <HouseCard />

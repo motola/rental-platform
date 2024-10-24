@@ -1,7 +1,12 @@
 import React, {useState} from "react";
 import logo from '../assets/images/Moshitu.svg';
 
-const Navbar = ({buttonLabel, dropdownOptions, link}) => {
+const signup = {
+  url: '/signup',
+  label: 'Login/SignUp'
+}
+
+const Navbar = ({buttonLabel='Login/SignUp', dropdownOptions, link=signup}) => {
 
   const  [dropdown, setDropdown] = useState(false);
 
@@ -14,16 +19,18 @@ const Navbar = ({buttonLabel, dropdownOptions, link}) => {
       <div className="w-full px-0 flex justify-between items-center">
         {/* Left Side: Logo and Name */}
         <div className="flex items-center">
-          <img
+          <a href="/">
+          {/* <img
             src="/logo.png" // replace this with the logo's path
             alt="Logo"
             className="h-8 w-8 mr-2"
-          />
-          <img src={logo} className="px-16 -py-28 w-1/4"/>
+          /> */}
+          <img src={logo} className="px-5 -py-4 w-1/5"/>
+          </a>
         </div>
 
         {/* Right Side: Navigation Links */}
-        <ul className="flex space-x-8">
+        <ul className="flex pt-7 space-x-8">
           <li>
             <a href="#home" className="text-gray-600 hover:text-green-500">
               Rents
@@ -40,7 +47,7 @@ const Navbar = ({buttonLabel, dropdownOptions, link}) => {
             </a>
           </li>
           <li>
-            <a href="#contact" className="text-gray-600 hover:text-green-500">
+            <a href="/about" className="text-gray-600 hover:text-green-500 ">
               About us
             </a>
           </li>
@@ -64,7 +71,7 @@ const Navbar = ({buttonLabel, dropdownOptions, link}) => {
           )} 
           </div>
         ) : (
-            <a className="text-gray-600 font-bold hover:text-white bg-buttonPrimary py-2 px-4 rounded-md" href="/signup" > {link.label} 
+            <a className="text-white hover:bg-green-600 bg-buttonPrimary -mt-4 py-4 px-4 rounded-md" href="/signup" > {link.label} 
             </a>
           )}
         </ul>

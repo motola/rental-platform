@@ -21,6 +21,7 @@ const Uploads = () => {
           <PlainCard />
         </div>
       </div>
+      
     );
   };
   

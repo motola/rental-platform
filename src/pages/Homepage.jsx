@@ -7,18 +7,14 @@ import Footer from '../components/footer';
 
 
 function Homepage() {
-  const signup = {
-    url: '/signup',
-    label: 'login/SignUp'
-  }
+
 
   return (
     <>
-     <Navbar buttonLabel='Login/SignUp' link={signup} />
+     <Navbar />
      <Hero />
      <Section />
      <HomeCard />
-     <Footer />
     </>
   )
 }

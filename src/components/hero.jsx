@@ -20,7 +20,7 @@ const Hero = () => {
             className="p-2 rounded-l-md border-2 w-full border-gray-300 outline-none"
           />
           <button className="bg-green-500 text-white p-2 py-3 rounded-r-md flex items-center">
-            <BsSearch className="h-5 w-5" />
+            <BsSearch className="h-5 w-5"/>
             <span className="ml-2"></span>
           </button>
         </div>
