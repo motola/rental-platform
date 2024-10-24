@@ -11,7 +11,7 @@ const MapComponent = ({ address }) => {
     margin:"auto"
   };
 
-  const apiKey = "AIzaSyA1wsMZfsH0nV5UEXa6d7n60g_DBj-MCU0" 
+  const apiKey = process.env.MAP_KEY 
 
   // Function to get latitude and longitude from the address using Google Geocoding API
   const getCoordinates = async (address) => {
@@ -47,7 +47,7 @@ const MapComponent = ({ address }) => {
       {/* Display Google Map based on coordinates */}
       {coordinates ? (
         <div className="mt-4">
-          <LoadScript googleMapsApiKey="AIzaSyA1wsMZfsH0nV5UEXa6d7n60g_DBj-MCU0">
+          <LoadScript googleMapsApiKey={apiKey}>
             <GoogleMap
               mapContainerStyle={mapContainerStyle}
               center={coordinates}
